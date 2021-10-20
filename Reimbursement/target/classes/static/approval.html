@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+        <title>Kanban Conquerors Manager</title>
+        <meta charset="UTF-8" />
+      
+        <link rel="stylesheet" href="home.css" />
+    </head>
+    <!--The body tag contains the web elements that are visible to the end users and can also include script tags and style tags.-->
+     <head>
+        <h1 class="pageTitle"> Kanban Conquerors Expense Reimbursement Form</h1>
+        <img src="https://cdn.wccftech.com/wp-content/uploads/2019/03/Conquerors-Blade-Preveiw-and-More-01-Header-740x390.jpg"/>
+    </head>
+
+    <nav>
+        <a href="">statistics</a>
+        <a href="index.html">Logout</a>
+
+      
+    </nav>
+    
+<div id = "form_container" >
+  <center>
+
+         
+         <form method="POST" action="http://localhost:8000/approve/new">
+         
+         <th>Status </th>
+          <td>  <select required name="status"> <option value="approval">Approve</option> <option value="Deny">Deny</option>
+          
+	  <th>Manager </th>
+   <td> <input type="text" name="approveBy" required name="approveBy"/></td>
+   <input type="submit" value= "Submit" onclick="update()" required/>
+   
+         </form>
+        
+  </thead> 
+</table>
+<center>
+<table class= "inline" border="1" id="show" >
+
+    <tr>
+      <td>Name</td>
+     
+      <td>Amount</td>
+       
+      <td>Reason</td>
+
+  
+    </tr>
+    
+  </table >
+      <tr>
+      <table class= "inline" border="1" id="approve" >
+ 
+      <td>Status </td>
+      
+	  <td>Manager </td>
+  
+    </tr>
+  </table>
+  
+</center>
+</div>
+    
+      </style>
+      <footer>
+          <h5>Copyright 2021 @Kanban Conquerors. All Right Reserved</h5>
+      </footer>
+    
+    <script src="approval.js"></script> 
+    </body>
+</html>

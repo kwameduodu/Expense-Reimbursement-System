@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+        <title>Kanban Conquerors</title>
+        <meta charset="UTF-8" />
+      
+        <link rel="stylesheet" href="home.css" />
+    </head>
+    <!--The body tag contains the web elements that are visible to the end users and can also include script tags and style tags.-->
+     <head>
+        <h1 class="pageTitle"> Kanban Conquerors Expense Reimbursement Form</h1>
+        <img src="https://cdn.wccftech.com/wp-content/uploads/2019/03/Conquerors-Blade-Preveiw-and-More-01-Header-740x390.jpg"/>
+    </head>
+
+    <nav>
+        <a href="index.html">Approve Expenses</a>
+         <a href="index.html">Logout</a>
+    </nav>
+    
+<div id = "form_container" >
+  <center>
+
+         
+         <form method="POST" action="http://localhost:8000/employee/new">
+             <tr>
+        <th>Name</th>
+           <td> <input type="text" name="name" required name="name"/></td>
+            
+             <tbody>
+             <th> Amount</th>
+           <td> <input type="number" name="amount" required name="amount"/></td>
+               </tr>
+  </thead>
+           <th> Reason</th>
+           <td> <input type="text" name="reason" required name="reason"/></td>
+          <input type="submit" value= "add" onclick="getAllemployee()" required/>
+       
+   
+   <input type="submit" value= "Submit" onclick="update()" required/>
+             </tr>
+         </form>
+        
+  </thead> 
+</table>
+<center>
+<table class= "inline" border="1" id="show" >
+
+    <tr>
+      <td>Name</td>
+     
+      <td>Amount</td>
+       
+      <td>Reason</td>
+
+  
+    </tr>
+    
+  </table >
+      <tr>
+      <table class= "inline" border="1" id="approve" >
+ 
+      <td>Status </td>
+      
+	  <td>Manager </td>
+  
+    </tr>
+  </table>
+  
+</center>
+</div>
+    
+      </style>
+      <footer>
+          <h5>Copyright 2021 @Kanban Conquerors. All Right Reserved</h5>
+      </footer>
+    
+    <script src="ajax.js"></script> 
+    </body>
+</html>

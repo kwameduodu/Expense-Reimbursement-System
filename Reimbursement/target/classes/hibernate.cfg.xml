@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Specifying the Driver class (which should be on the classpath as we 
+			have JDBC in our pom -->
+		<property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
+		<!-- Specify which dialect of SQL you're using. -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MariaDBDialect</property>
+		<!-- Specify your DB credentials. -->
+		<property name="hibernate.connection.url"></property>
+		<property name="hibernate.connection.username"></property>
+		<property name="hibernate.connection.password"></property>
+		<!-- The next property is optional, but it can be useful if you want to 
+			know the SQL queries that Hibernate is generating for you. -->
+		<property name="show_sql">true</property>
+		<!-- This property determines how many a connections a user is allowed 
+			to your DB. -->
+		<property name="hibernate.connection.pool_size">5</property>
+		<!-- This property defines show Hibernate sessions are handled. In this 
+			case, sessions are tracked by their thread of execution. -->
+		<property name="hibernate.current_session_context_class">thread</property>
+
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<!-- We have to tell Hibernate which models are annotated because it doesn't 
+			autodetect annotations. -->
+		<mapping class="com.reimbursement.model.Reimbursement"/>
+		<mapping class="com.reimbursement.model.Approval" />
+
+	</session-factory>
+
+</hibernate-configuration>
+
+
+
+	
